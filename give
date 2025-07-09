@@ -1,0 +1,28 @@
+from sympy import symbols, Eq, solve, simplify, expand, factor
+
+# Define variables
+x, y, z = symbols('x y z')
+
+# Example 1: Simplify an expression
+expr = (x**2 + 2*x + 1)
+simplified_expr = simplify(expr)
+print("Simplified Expression:", simplified_expr)
+
+# Example 2: Expand an expression
+expanded_expr = expand((x + 1)**2)
+print("Expanded Expression:", expanded_expr)
+
+# Example 3: Factor an expression
+factored_expr = factor(x**2 + 2*x + 1)
+print("Factored Expression:", factored_expr)
+
+# Example 4: Solve an equation
+equation = Eq(x**2 + 2*x + 1, 0)
+solution = solve(equation, x)
+print("Solution to Equation:", solution)
+
+# Example 5: Solve a system of equations
+eq1 = Eq(2*x + 3*y, 12)
+eq2 = Eq(x - y, 1)
+solutions = solve((eq1, eq2), (x, y))
+print("System of Equations Solution:", solutions)
